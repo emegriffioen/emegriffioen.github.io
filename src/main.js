@@ -9,6 +9,8 @@ function calculate() {
 
     const output = document.getElementById("final-output");
 
+    // Checks numbers are numbers
+
     if (Number.isNaN(weight) || Number.isNaN(dosage) || Number.isNaN(concentration)) {
         output.hidden = false;
         output.textContent = "Please Enter Numbers";

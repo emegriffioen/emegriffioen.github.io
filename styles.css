@@ -1,8 +1,23 @@
 body {
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+article {
+    margin: 20px;
+    padding: 5px;
 }
 
 .main {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    background-color: rgb(215, 215, 215);    
+}
+
+#number-selection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

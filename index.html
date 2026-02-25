@@ -2,24 +2,55 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="src/main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
     <h1>Medverter</h1>
-    <section>
+    <section id="number-selection">
     <!-- Selection -->
 
-        <select id="units">
-            <option value="apple">mg/lb</option>
+        <article>
+        <h3>Weight</h3>
+        <input id="weight-in" type="number" placeholder="Enter a value..."></input>
+        <label>
+        <select id="weight-unit">
+            <option value="lb">Pounds (lb)</option>
+            <option value="kg">Kilograms (kg)</option>
         </select>
+        </label>
+        </article>
+
+        <article>
+        <h3>Dosage</h3>
+        <input id="dosage-in" type="number" placeholder="Enter a value..."></input>
+        <label>
+        <select id="dosage-unit">
+            <option value="mg/lb">Milligrams per pound (mg/lb)</option>
+            <option value="mg/kg">Milligrams per kilogram (mg/kg)</option>
+        </select>
+        </label>
+        </article>
+
+        <article>
+        <h3>Concentration</h3>
+        <input id="concentration-in" type="number" placeholder="Enter a value..."></input>
+        <label>
+        <select id="concentration-unit">
+            <option value="ml/mg">Milligram per milliliter (mg/ml)</option>
+        </select>
+        </label>
+        </article>
 
     </section>
     <section>
     <!--Results-->
-    
+        <article>
+            <button id="solve-button">Solve</button>
+            <p id="final-output" hidden>0.123908 Milliliters</p>
+        </article>
     </section>
 
+    <script src="src/main.js"></script>
 </body>
 </html>

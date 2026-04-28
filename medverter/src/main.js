@@ -1,7 +1,6 @@
 function calculate() {
     let weight = parseFloat(document.getElementById("weight-in").value);
     let dosage = parseFloat(document.getElementById("dosage-in").value);
-    let concentration = parseFloat(document.getElementById("concentration-in").value);
 
     let weightUnit = document.getElementById("weight-unit").value;
     let dosageUnit = document.getElementById("dosage-unit").value;
@@ -11,15 +10,21 @@ function calculate() {
 
     // Checks numbers are numbers
 
-    if (Number.isNaN(weight) || Number.isNaN(dosage) || Number.isNaN(concentration)) {
+    if (Number.isNaN(weight) || Number.isNaN(dosage)){
         output.hidden = false;
         output.textContent = "Please Enter Numbers";
         return;
     }
 
+    if (concentrationUnit === "250/5") {
+        concentration = 50; 
+    } else if (concentrationUnit === "100/5") {
+        concentration = 20;
+    }
+
     let milligrams = findMilligrams(weightUnit, dosageUnit, weight, dosage);
 
-    milliliters = milligrams / concentration;
+    let milliliters = milligrams / concentration;
 
     // Rounds to 2 decimals
 

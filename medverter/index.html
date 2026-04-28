@@ -3,46 +3,51 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<header>
-    <h1>Medverter</h1>
-    <p id="tagline"> by emegriffioen</p>
-</header>
 <body>
+    <div class="nav-container">
+    <nav>
+    <h1>Medverter</h1>
+    </nav>
+    </div>
+
     <section id="number-selection">
     <!-- Selection -->
 
         <article>
+
         <h3>Weight</h3>
+        <div class="selection-box">    
         <input id="weight-in" type="number" placeholder="Enter a value..."></input>
         <label>
         <select id="weight-unit">
-            <option value="lb">Pounds (lb)</option>
             <option value="kg">Kilograms (kg)</option>
+            <option value="lb">Pounds (lb)</option>
         </select>
         </label>
-        </article>
+        </div>
 
-        <article>
         <h3>Dosage</h3>
+        <div class="selection-box"> 
         <input id="dosage-in" type="number" placeholder="Enter a value..."></input>
         <label>
         <select id="dosage-unit">
-            <option value="mg/lb">Milligrams per pound (mg/lb)</option>
             <option value="mg/kg">Milligrams per kilogram (mg/kg)</option>
+            <option value="mg/lb">Milligrams per pound (mg/lb)</option>
         </select>
-        </label>
+        </div>
+
+        <h3>Concentration</h3>
+        <div class="selection-box"> 
+        <select id="concentration-unit">
+            <option value="250/5">250 milligrams / 5 milliliters</option>
+            <option value="100/5">100 milligrams / 5 milliliters</option>
+        </select>
+        </div>
+
         </article>
 
-        <article>
-        <h3>Concentration</h3>
-        <input id="concentration-in" type="number" placeholder="Enter a value..."></input>
-        <label>
-        <select id="concentration-unit">
-            <option value="ml/mg">Milligram per milliliter (mg/ml)</option>
-        </select>
-        </label>
-        </article>
 
     </section>
     <section>
